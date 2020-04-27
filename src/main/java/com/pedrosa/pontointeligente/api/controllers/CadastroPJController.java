@@ -63,8 +63,15 @@ public class CadastroPJController {
 	}
 
 	private CadastroPJDto converterCadastroPjDto(Funcionario funcionario) {
-		// TODO Auto-generated method stub
-		return null;
+		CadastroPJDto cadastroPJDto = new CadastroPJDto();
+		cadastroPJDto.setId(funcionario.getId());
+		cadastroPJDto.setNome(funcionario.getNome());
+		cadastroPJDto.setEmail(funcionario.getEmail());
+		cadastroPJDto.setCpf(funcionario.getCpf());
+		cadastroPJDto.setRazaoSocial(funcionario.getEmpresa().getRazaoSocial());
+		cadastroPJDto.setCnpj(funcionario.getEmpresa().getCnpj());
+		
+		return cadastroPJDto;
 	}
 
 	private Empresa converterDtoParaEmpresa(CadastroPJDto cadastroPJDto, BindingResult result) {
