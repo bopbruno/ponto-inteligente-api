@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.6.RELEASE</version>
+		<version>1.5.6.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.pedrosa</groupId>
@@ -59,11 +59,9 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
 		<dependency>
-		    <groupId>org.flywaydb</groupId>
-		    <artifactId>flyway-core</artifactId>
-		    <version>4.1.2</version>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
 		</dependency>
 
 <!-- 
@@ -88,9 +86,10 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-				<dependency>
+		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
+			<version>3.6</version>
 		</dependency>
 		
 				<!-- Swagger e Swagger UI -->

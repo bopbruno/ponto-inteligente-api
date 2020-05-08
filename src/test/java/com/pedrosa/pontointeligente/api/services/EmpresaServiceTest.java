@@ -35,7 +35,7 @@ public class EmpresaServiceTest {
 	@Before
 	public void setUp() throws Exception{
 		BDDMockito.given(this.empresaRepository.findByCnpj(Mockito.anyString())).willReturn(new Empresa());
-		BDDMockito.given(this.empresaRepository.save(Mockito.any())).willReturn(new Empresa());
+		BDDMockito.given(this.empresaRepository.save(Mockito.any(Empresa.class))).willReturn(new Empresa());
 	}
 	
 	@Test

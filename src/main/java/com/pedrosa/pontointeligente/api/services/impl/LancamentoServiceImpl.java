@@ -30,7 +30,7 @@ public class LancamentoServiceImpl implements LancamentoService {
 	@Override
 	public Optional<Lancamento> buscarPorId(Long id) {
 		log.info("Buscanco um lançamento pelo ID", id);
-		return this.lancamentoRepository.findById(id);
+		return Optional.ofNullable(this.lancamentoRepository.findOne(id));
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class LancamentoServiceImpl implements LancamentoService {
 	@Override
 	public void remover(Long id) {
 		log.info("Removendo o lançamento ID {}", id);
-		this.lancamentoRepository.deleteById(id);
+		this.lancamentoRepository.delete(id);
 	}
 
 }

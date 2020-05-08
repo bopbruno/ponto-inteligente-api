@@ -1,6 +1,6 @@
 package com.pedrosa.pontointeligente.api.repositories;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.Date;
@@ -65,7 +65,7 @@ public class LancamentoRepositoryTest {
 	
 	@Test
 	public void testBuscarLancamentosPorFuncionarioIdPaginado() {
-		PageRequest page = PageRequest.of(0, 10);
+		PageRequest page = new PageRequest(0, 10);
 		Page<Lancamento> lancamentos = this.lancamentoRepository.findByFuncionarioId(funcionarioId, page);
 		
 		assertEquals(2, lancamentos.getTotalElements());
